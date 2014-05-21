@@ -1,0 +1,23 @@
+
+class MSFT_PSDSCAction
+{
+[key] 
+string ConfigurationId;
+[ContentType("application/octet-stream"), EmbeddedInstance("Edm_Stream")] 
+string ConfigurationContent;
+sint32 GetAction(string Checksum, string ChecksumAlgorithm, boolean NodeCompliant, sint32 StatusCode, [out] string Status);
+};
+
+class MSFT_PSDSCModule
+{
+[Key] 
+string ConfigurationId;
+[key] 
+string ModuleName;
+[key] 
+string ModuleVersion;
+[ContentType("application/octet-stream"), EmbeddedInstance("Edm_Stream")] 
+string ModuleContent;
+};
+
+
